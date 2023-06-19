@@ -12,7 +12,7 @@ currentbranch = 'stable'
 
 filename = 'stable_diffusion_1_5_webui_colab.ipynb'
 
-vclvarpath = '/content/vclvariables'
+vclvarpath = '/content/drive/MyDrive/vclvariables'
 def pickleload(prevvalue, inputfile):
   inputpath = os.path.join(vclvarpath, inputfile + '.pkl')
   if os.path.exists(inputpath):
@@ -29,7 +29,7 @@ if colaboptions:
   filename = colaboptions["filename"]
 
 
-colabpath = f"/content/camendurus/{currentbranch}/{filename}"
+colabpath = f"/content/drive/MyDrive/camendurus/{currentbranch}/{filename}"
 if debugmode==True:
     colabpath = r"C:\Users\Ethereal\Downloads\526_mix_webui_colab.ipynb"
 
@@ -53,9 +53,9 @@ with open(colabpath, 'r', encoding='utf-8') as f:
             elif stripped_line.startswith('sed'):
                 currentpart = 'part3'
             camendururepo = 'camenduru/stable-diffusion-webui'
-            if camendururepo in stripped_line and not '/content/volatile-concentration-localux' in stripped_line:
+            if camendururepo in stripped_line and not '/content/drive/MyDrive/volatile-concentration-localux' in stripped_line:
                 if camendururepo in stripped_line and (stripped_line.find(camendururepo) + len(camendururepo) == len(stripped_line) or stripped_line[stripped_line.find(camendururepo) + len(camendururepo)] in [' ', '\n']):
-                    stripped_line += ' /content/volatile-concentration-localux'
+                    stripped_line += ' /content/drive/MyDrive/volatile-concentration-localux'
             if stripped_line:
                 if stripped_line.startswith('aria2c') and not '4x-UltraSharp.pth' in stripped_line:
                     pass
@@ -66,7 +66,7 @@ with open(colabpath, 'r', encoding='utf-8') as f:
                 elif stripped_line=='rm *.deb':
                     pass
                 else:
-                    commandtoappend = stripped_line.replace('/content/stable-diffusion-webui', '/content/volatile-concentration-localux')
+                    commandtoappend = stripped_line.replace('/content/drive/MyDrive/stable-diffusion-webui', '/content/drive/MyDrive/volatile-concentration-localux')
                     if currentpart == 'part1':
                         linetoexecute_part1.append(commandtoappend)
                     elif currentpart == 'part2':

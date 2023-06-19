@@ -2,7 +2,7 @@ import os, math, subprocess, pickle
 
 # subprocess.run("apt -y install -qq aria2", shell=True, check=True)
 
-everycolab = '/content/camendurus/lite'
+everycolab = '/content/drive/MyDrive/camendurus/lite'
 everycolabname = []
 colabnamepair = []
 for colabname in os.listdir(everycolab):
@@ -46,5 +46,5 @@ if chosencolabname:
                   aria2c_lines.append(stripped_line)
 
 if aria2c_lines:
-  with open('/content/arialist.pkl', 'wb') as f:
+  with open('/content/drive/MyDrive/arialist.pkl', 'wb') as f:
       pickle.dump(aria2c_lines, f)

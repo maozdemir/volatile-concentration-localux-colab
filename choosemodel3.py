@@ -10,7 +10,7 @@ import gradio as gr
 
 # subprocess.run("apt -y install -qq aria2", shell=True, check=True)
 
-everycolab = f'/content/camendurus/{branchtype}'
+everycolab = f'/content/drive/MyDrive/camendurus/{branchtype}'
 everycolabname = []
 colabnamepair = []
 for colabname in os.listdir(everycolab):
@@ -19,7 +19,7 @@ for colabname in os.listdir(everycolab):
 
 sortedcolabname = sorted(everycolabname)
 
-with open('/content/sortedcolabname.pkl', 'wb') as f:
+with open('/content/drive/MyDrive/sortedcolabname.pkl', 'wb') as f:
     pickle.dump(sortedcolabname, f)
 
 # totalcolabcount = len(everycolabname)
@@ -58,5 +58,5 @@ with open('/content/sortedcolabname.pkl', 'wb') as f:
 #                   aria2c_lines.append(stripped_line)
 
 # if aria2c_lines:
-#   with open('/content/arialist.pkl', 'wb') as f:
+#   with open('/content/drive/MyDrive/arialist.pkl', 'wb') as f:
 #       pickle.dump(aria2c_lines, f)

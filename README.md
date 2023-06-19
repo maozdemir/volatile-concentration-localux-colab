@@ -14,7 +14,7 @@ As long as he doesn't change much on the repo code, this colab will always works
 Basically proof-of-concept. Would like to hear feedbacks and suggestion on the issues page.
 
 ### ⚠️ Things to Note!
-- The usual `/content/stable-diffusion-webui` is renamed to `/content/volatile-concentration-localux`, just keep in mind. Every file and folder inside is normal. (Pretty obvious though)
+- The usual `/content/drive/MyDrive/stable-diffusion-webui` is renamed to `/content/drive/MyDrive/volatile-concentration-localux`, just keep in mind. Every file and folder inside is normal. (Pretty obvious though)
 
 ### 🆙 Latest Update:
 - 16/06/2023 (June): Added `a1111-sd-webui-tagcomplete` and `composable-lora extension` as optional choosable extension. Fixed 'all extension is missing' bug.

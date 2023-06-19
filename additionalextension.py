@@ -1,6 +1,6 @@
 import os, subprocess, sys, shlex, pickle, re
 
-vclvarpath = '/content/vclvariables'
+vclvarpath = '/content/drive/MyDrive/vclvariables'
 def pickledump(vartodump, outputfile):
   outputpath = os.path.join(vclvarpath, outputfile + '.pkl')
   with open(outputpath, 'wb') as f:

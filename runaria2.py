@@ -4,12 +4,12 @@ arialines = None
 colaboptions = None
 downloadcnet = False
 
-if os.path.exists('/content/arialist.pkl'):
-  with open('/content/arialist.pkl', 'rb') as f:
+if os.path.exists('/content/drive/MyDrive/arialist.pkl'):
+  with open('/content/drive/MyDrive/arialist.pkl', 'rb') as f:
       arialines = pickle.load(f)
 
-if os.path.exists('/content/colaboptions.pkl'):
-  with open('/content/colaboptions.pkl', 'rb') as f:
+if os.path.exists('/content/drive/MyDrive/colaboptions.pkl'):
+  with open('/content/drive/MyDrive/colaboptions.pkl', 'rb') as f:
       colaboptions = pickle.load(f)
       downloadcnet = colaboptions["controlnet"]
       downloadmodels = colaboptions["download_model"]
@@ -25,7 +25,7 @@ def subprocessing(execline):
 if arialines:
   for line in arialines:
     if not '4x-UltraSharp.pth' in line:
-      ariaexecline = line[2:].replace('\\n",', '').replace('/content/stable-diffusion-webui', '/content/volatile-concentration-localux')
+      ariaexecline = line[2:].replace('\\n",', '').replace('/content/drive/MyDrive/stable-diffusion-webui', '/content/drive/MyDrive/volatile-concentration-localux')
       if 'ControlNet' in ariaexecline:
          if downloadcnet:
             subprocessing(ariaexecline)

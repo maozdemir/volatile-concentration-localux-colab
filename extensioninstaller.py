@@ -10,13 +10,13 @@ extensionlines = []
 
 filename = 'stable_diffusion_1_5_webui_colab.ipynb'
 
-if os.path.exists('/content/colaboptions.pkl'):
-  with open('/content/colaboptions.pkl', 'rb') as f:
+if os.path.exists('/content/drive/MyDrive/colaboptions.pkl'):
+  with open('/content/drive/MyDrive/colaboptions.pkl', 'rb') as f:
       colaboptions = pickle.load(f)
       currentbranch = colaboptions["branch"]
       filename = colaboptions["filename"]
 
-colabpath = f"/content/camendurus/{currentbranch}/{filename}"
+colabpath = f"/content/drive/MyDrive/camendurus/{currentbranch}/{filename}"
 if debugmode==True:
     colabpath = r"C:\Users\Ethereal\Downloads\526_mix_webui_colab.ipynb"
 
@@ -35,14 +35,14 @@ with open(colabpath, 'r', encoding='utf-8') as f:
                 startcapture = True
         else:
             camendururepo = 'camenduru/stable-diffusion-webui'
-            if camendururepo in stripped_line and not '/content/volatile-concentration-localux' in stripped_line:
+            if camendururepo in stripped_line and not '/content/drive/MyDrive/volatile-concentration-localux' in stripped_line:
                 if camendururepo in stripped_line and (stripped_line.find(camendururepo) + len(camendururepo) == len(stripped_line) or stripped_line[stripped_line.find(camendururepo) + len(camendururepo)] in [' ', '\n']):
-                    stripped_line += ' /content/volatile-concentration-localux'
+                    stripped_line += ' /content/drive/MyDrive/volatile-concentration-localux'
             if stripped_line.startswith('git clone https://github.com/'):
-                commandtoappend = stripped_line.replace('/content/stable-diffusion-webui', '/content/volatile-concentration-localux')
+                commandtoappend = stripped_line.replace('/content/drive/MyDrive/stable-diffusion-webui', '/content/drive/MyDrive/volatile-concentration-localux')
                 extensionlines.append(commandtoappend)
 
-with open('/content/extensions.pkl', 'wb') as f:
+with open('/content/drive/MyDrive/extensions.pkl', 'wb') as f:
     pickle.dump(extensionlines, f)
 
 # def debugline(codetodebug):
